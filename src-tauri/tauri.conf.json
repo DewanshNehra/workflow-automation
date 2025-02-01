@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "workflow-automation",
+  "version": "0.1.0",
+  "identifier": "com.workflow-automation.app",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Workflow Automation",
+        "width": 330,
+        "height": 540,
+        "decorations": false,
+        "resizable": false,
+        "transparent": true,
+        "shadow": false,
+        "x": 10,
+        "y": 250
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "plugins": {
+    "window": {},
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://github.com/DewanshNehra/workflow-automation/releases/latest/download/latest.json"
+      ],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEVFNzE4QjJCM0I0OUUyOEIKUldTTDRrazdLNHR4N3JiZnMxZ0ZaRU5pNHVEK0x0cDN3K0VBUGMzd0VUMUJJRGphRVcyUUdEcysK"
+
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "createUpdaterArtifacts": true,
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/icon.ico"
+    ]
+  }
+}
