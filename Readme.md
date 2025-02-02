@@ -53,7 +53,7 @@ pnpm tauri dev  # or npm run tauri dev
 pnpm tauri build # or npm run tauri build
 ```
 
-Or optionally, you can download the compiled binary through [releases]().
+Or optionally, you can download the compiled binary through [releases](https://github.com/DewanshNehra/workflow-automation/releases).
 
 **Note**: The app includes a built-in updater to automatically fetch the latest updates.
 
@@ -64,7 +64,11 @@ Or optionally, you can download the compiled binary through [releases]().
   
 
 
-https://github.com/user-attachments/assets/b91107ca-02d1-4c39-882d-a67388e5c6dc
+
+
+https://github.com/user-attachments/assets/4cbf2eb1-800e-47f8-b9d4-0eb1e696bb0c
+
+
 
 
 </details>
@@ -91,12 +95,12 @@ Note: The app requires the GitHub CLI (`gh`) to be installed on your system. If 
 <summary>Screenshots</summary>
 
 <p>
-    <img src="https://github.com/user-attachments/assets/23b80585-00aa-4e21-bd92-3a186f53e42e" hspace="7" width="25%" >
-    <img src="https://github.com/user-attachments/assets/96f87366-d652-4b4e-bbe5-b018dc844a5b" hspace="7" width="25%" >
-    <img src="https://github.com/user-attachments/assets/e802f584-a448-4a6b-87cf-3081a80b0e16" hspace="7" width="25%" >
-    <img src="https://github.com/user-attachments/assets/eb756eb1-1789-433f-b545-aaaf604131d8" hspace="7" width="25%" >
-    <img src="https://github.com/user-attachments/assets/eccb08a5-253c-46a1-802a-5b38bfc7ad5e" hspace="7" width="25%" >
-    <img src="https://github.com/user-attachments/assets/847dfc55-e77a-41fd-8f3a-beaad2528807" hspace="7" width="25%" >
+    <img src="https://github.com/user-attachments/assets/0b71fc69-e2f9-4585-b4af-b3df71fe4002" hspace="7" width="25%" >
+    <img src="https://github.com/user-attachments/assets/1932b188-4291-419f-964b-18b7e4f5b157" hspace="7" width="25%" >
+    <img src="https://github.com/user-attachments/assets/3a09c264-638d-47ab-9246-72d9fbd9f45f" hspace="7" width="25%" >
+    <img src="https://github.com/user-attachments/assets/ed344b7e-591a-4734-9f8c-5b2472c2faf5" hspace="7" width="25%" >
+    <img src="https://github.com/user-attachments/assets/7c42155c-7582-412c-9a41-46bfd604cd1e" hspace="7" width="25%" >
+    <img src="https://github.com/user-attachments/assets/a2cc204b-d00e-41bd-b8a8-c9db26d57674" hspace="7" width="25%" >
     
 </p>
 </details>
