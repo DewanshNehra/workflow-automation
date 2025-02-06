@@ -40,6 +40,7 @@ async fn install_gh_cli() -> Result<bool, String> {
         .arg("install")
         .arg("--id")
         .arg("GitHub.cli")
+        .arg("--accept-source-agreements")
         .stdout(Stdio::piped())
         .stderr(Stdio::piped())
         .creation_flags(0x08000000)
@@ -208,17 +209,28 @@ async fn run_generated_commands(commands: Vec<String>) -> Result<Vec<String>, St
 
     for command in commands {
         println!("Running command: {}", command);
-        let output = Command::new("sh")
-            .arg("-c")
+        let output = Command::new("powershell")
+            .arg("-Command")
             .arg(&command)
             .stdout(Stdio::piped())
-            .creation_flags(0x08000000)
+            .stderr(Stdio::piped())
+            .creation_flags(0x08000000)  
             .output()
-            .map_err(|e| e.to_string())?;
+            .map_err(|e| format!("Failed to execute command: {}", e))?;
 
-        let output_str = String::from_utf8_lossy(&output.stdout).to_string();
-        println!("Command output: {}", output_str);
-        results.push(output_str);
+        let stdout = String::from_utf8_lossy(&output.stdout).to_string();
+        let stderr = String::from_utf8_lossy(&output.stderr).to_string();
+
+        println!("Command stdout: {}", stdout);
+        if !stderr.is_empty() {
+            println!("Command stderr: {}", stderr);
+        }
+
+        if !output.status.success() {
+            return Err(format!("Command failed: {}\nError: {}", command, stderr));
+        }
+
+        results.push(stdout);
     }
 
     Ok(results)
