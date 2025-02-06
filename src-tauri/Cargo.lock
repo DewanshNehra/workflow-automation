@@ -5286,7 +5286,7 @@ dependencies = [
 
 [[package]]
 name = "workflow-automation"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "expectrl",
  "futures",
